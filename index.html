@@ -5,21 +5,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Excel</title>
 </head>
 
 <body>
     <div class="container">
-        <div class="title-bar"></div>
-        <div class="menu-bar"></div>
-        <div class="menu-icon-bar"></div>
-        <div class="formula-bar"></div>
-        <div class="data-container">
-            <div class="row-name-container"></div>
-            <div class="column-name-contianer"></div>
-            <div class="input-cell-container"></div>
+        <div class="title-bar">Book 1 Excel</div>
+        <div class="menu-bar">
+            <div class="menu-file menu-item">File</div>
+            <div class="menu-home menu-item selected">Home</div>
+            <div class="menu-insert menu-item">Insert</div>
+            <div class="menu-layout menu-item">Layout</div>
+            <div class="menu-help menu-item">Help</div>
         </div>
-        <div class="sheet-bar"></div>
+        <div class="menu-icon-bar">
+            <div class="material-icons menu-icon icon-cut">content_cut</div>
+            <div class="material-icons menu-icon icon-copy">content_copy</div>
+            <div class="material-icons menu-icon icon-paste">content_paste</div>
+            <select class="selector font-family-selector">
+                <option value="hello1">Hello</option>
+                <option value="hello2">Hello2</option>
+            </select>
+
+            <select class="selector font-size-selector">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                <option value="60">60</option>
+                <option value="70">70</option>
+                <option value="80">80</option>
+            </select>
+
+
+            <div class="material-icons menu-icon icon-bold">format_bold</div>
+            <div class="material-icons menu-icon icon-italic">format_italic</div>
+            <div class="material-icons menu-icon icon-underline">format_underline</div>
+            <div class="material-icons menu-icon icon-align-left">format_align_left</div>
+            <div class="material-icons menu-icon icon-align-center">format_align_center</div>
+            <div class="material-icons menu-icon icon-align-right">format_align_right</div>
+            <div class="material-icons menu-icon icon-align-center">format_color_fill</div>
+            <div class="material-icons menu-icon icon-align-right">format_color_text</div>
+        </div>
+        <div class="formula-bar "></div>
+        <div class="data-container ">
+            <div class="select-all"></div>
+            <div class="column-name-contianer "></div>
+            <div class="row-name-container "></div>
+
+            <div class="input-cell-container "></div>
+        </div>
+        <div class="sheet-bar ">
+            <div class="scroller">
+                <div class="material-icons icon-left-scroll">arrow_left</div>
+                <div class="material-icons icon-right-scroll">arrow_right</div>
+            </div>
+            <div class="material-icons icon-add">add_circle</div>
+            <div class="sheet-tab-container">
+                <div class="sheet-tab">Sheet 1</div>
+            </div>
+        </div>
     </div>
 </body>
 
