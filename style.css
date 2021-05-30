@@ -86,6 +86,11 @@ body {
 
 .formula-bar {
     height: 6vh;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    display: flex;
+    align-items: center;
+    background-color: rgb(241,241,241);
 }
 
 .sheet-bar {
@@ -192,6 +197,11 @@ body {
     min-height: 25px;
     border-bottom: 1px solid lightgray;
     border-right: 1px solid lightgray;
+    outline-color: #107c41;
+}
+
+.input-cell.selected{
+    border:2px solid #107c41;
 }
 
 .icon-add {
@@ -206,4 +216,32 @@ body {
 
 .sheet-tab:hover {
     cursor: default;
+}
+
+.formula-editor{
+    height: 70%;
+    border:1px solid lightgray;
+    background-color: white;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    display: flex;
+    align-items: center;
+}
+.selected-cell{
+    width: 120px;
+}
+.function-sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+}
+
+.formula-input{
+    width: calc(100vw - 160px);
+    outline-color: #107c41;
+}
+
+.menu-icon.selected{
+    background-color: lightgray;
 }
