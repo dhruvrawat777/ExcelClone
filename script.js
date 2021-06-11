@@ -23,7 +23,7 @@ $(document).ready(function () {
         let row = $(`<div class="cell-row"></div>`);
         for (let j = 1; j <= 100; j++) {
             let colCode = $(`.colId-${j}`).attr("id").split("-")[1];
-            let column = $(` <div class="input-cell" contenteditable="true" id="row-${i}-col-${j}" data="code-${colCode}"></div>`);
+            let column = $(` <div class="input-cell" contenteditable="false" id="row-${i}-col-${j}" data="code-${colCode}"></div>`);
             row.append(column);
         }
         $(".input-cell-container").append(row);
@@ -41,4 +41,15 @@ $(document).ready(function () {
         $(".input-cell.selected").removeClass("selected");
         $(this).addClass("selected");
     });
+    $(".input-cell").dblclick(function(){
+        $(".input-cell.selected").removeClass("selected");
+        $(this).addClass("selected");
+        $(this).attr("contenteditable","true");
+        $(this).focus();
+    });
+    $(".input-cell-container").scroll(function(){
+        $(".column-name-container").scrollLeft(this.scrollLeft);
+        $(".row-name-container").scrollTop(this.scrollTop);
+    })
+    
 });
