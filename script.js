@@ -81,6 +81,9 @@ $(document).ready(function () {
         $(this).attr("contenteditable", "true");
         $(this).focus();
     });
+    $(".input-cell").blur(function () {
+        $(".input-cell.selected").attr("contenteditable", "false");
+    })
     $(".input-cell-container").scroll(function () {
         $(".column-name-container").scrollLeft(this.scrollLeft);
         $(".row-name-container").scrollTop(this.scrollTop);
@@ -94,3 +97,37 @@ function getRowCol(ele) {
     let colId = parseInt(idArray[3]);
     return [rowId, colId];
 }
+
+function updateCell(property, value) {
+    $(".input-cell.selected").each(function () {
+        $(this).css(property, value);
+    })
+}
+
+$(".icon-bold").click(function () {
+    if ($(this).hasClass("selected")) {
+        updateCell("font-weight", "");
+    }
+    else {
+        updateCell("font-weight", "bold");
+    }
+})
+$(".icon-italic").click(function () {
+    if ($(this).hasClass("selected")) {
+        updateCell("font-style", "");
+    }
+    else {
+        updateCell("font-style", "italic");
+    }
+})
+
+$(".icon-underline").click(function () {
+    if ($(this).hasClass("selected")) {
+        updateCell("text-decoration", "");
+    }
+    else {
+        updateCell("text-decoration", "underline");
+    }
+})
+
+
